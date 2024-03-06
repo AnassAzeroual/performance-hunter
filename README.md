@@ -5,7 +5,7 @@ This guide outlines effective strategies to optimize your Angular application fo
 
 ## Change Detection
 
-* [ ] **OnPush Change Detection Strategy:** Reduce unnecessary re-renders by employing the OnPush strategy for components with frequent data updates. This strategy only triggers change detection when an input property changes.
+- [ ] **OnPush Change Detection Strategy:** Reduce unnecessary re-renders by employing the OnPush strategy for components with frequent data updates. This strategy only triggers change detection when an input property changes.
 
   
 
@@ -27,7 +27,7 @@ This guide outlines effective strategies to optimize your Angular application fo
 
 ## Component Optimization
 
-* [ ] **Lazy Loading:** Break down your application into feature modules and load them on demand using lazy loading.
+- [ ] **Lazy Loading:** Break down your application into feature modules and load them on demand using lazy loading.
 
   
 
@@ -49,7 +49,7 @@ This guide outlines effective strategies to optimize your Angular application fo
   export class AppModule { }
   Utilisez ce code avec précaution.
 
-* [ ] **TrackBy in ngFor Loops:** Optimize ngFor loops with large datasets by implementing the trackBy function to improve performance.
+- [ ] **TrackBy in ngFor Loops:** Optimize ngFor loops with large datasets by implementing the trackBy function to improve performance.
 
 ```TS
 items = [
@@ -80,7 +80,7 @@ items = updatedItems;
 
 Utilisez ce code avec précaution.
 
-* [ ] **Memoization For functions that produce the same output for identical inputs:**, leverage memoization techniques to cache results. This prevents redundant calculations and improves performance.
+- [ ] **Memoization For functions that produce the same output for identical inputs:**, leverage memoization techniques to cache results. This prevents redundant calculations and improves performance.
 
 ```TS
 function fibonacci(n: number): number {
@@ -103,7 +103,7 @@ return fib(n);
 
 Utilisez ce code avec précaution.
 
-* [ ] **RxJS Pipes for Data Transformations When dealing with frequent data updates:**, RxJS pipes offer a declarative way to transform and handle data streams. Pipes are optimized for efficiency, and you can chain them together for complex transformations.
+- [ ] **RxJS Pipes for Data Transformations When dealing with frequent data updates:**, RxJS pipes offer a declarative way to transform and handle data streams. Pipes are optimized for efficiency, and you can chain them together for complex transformations.
 
 ```TS
 import { map, filter } from 'rxjs/operators';
@@ -117,13 +117,13 @@ filter(item => item > 5) // Filter items greater than 5
 Utilisez ce code avec précaution.
 Build and Deployment
 
-* [ ] **Ahead-of-Time (AOT) Compilation:** Pre-compile your Angular application to JavaScript code during the build process using AOT compilation. This improves runtime performance by eliminating the need for on-the-fly compilation in the browser.
+- [ ] **Ahead-of-Time (AOT) Compilation:** Pre-compile your Angular application to JavaScript code during the build process using AOT compilation. This improves runtime performance by eliminating the need for on-the-fly compilation in the browser.
       ```shell
       ng build --configuration=production
       ```
       Utilisez ce code avec précaution.
 
-* [ ] **Tree-Shaking:** Enable tree-shaking when building your application to remove unused code from the final bundle. This reduces the overall application size and enhances loading times.
+- [ ] **Tree-Shaking:** Enable tree-shaking when building your application to remove unused code from the final bundle. This reduces the overall application size and enhances loading times.
       Tree-shaking is typically enabled by default in production builds.
 
-* [ ] **Code Splitting:** Split your application code into smaller chunks using techniques like dynamic imports or lazy loading. This allows browsers to load only the necessary code initially, improving perceived performance.
+- [ ] **Code Splitting:** Split your application code into smaller chunks using techniques like dynamic imports or lazy loading. This allows browsers to load only the necessary code initially, improving perceived performance.
